@@ -13,7 +13,7 @@ screen.tracer(0)
 l_paddel = Paddel(position=(-350, 0))
 r_paddel = Paddel(position=(350, 0))
 ball = Ball(position=(0, 0))
-
+ball.random_position()
 screen.listen()
 screen.onkey(r_paddel.go_up, "Up")
 screen.onkey(r_paddel.go_down, "Down")
@@ -25,7 +25,7 @@ game_is_on = True
 
 while game_is_on:
     screen.update()
-    ball.random_position()
+    
 
 
 screen.exitonclick()
