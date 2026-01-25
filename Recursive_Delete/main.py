@@ -3,9 +3,11 @@ import sys
 
 def handle_file(filelist, root_dir):
     rm_files = [] # Lists of files to delete
+    print(f"[+] Deleting total {len(filelist)} files.")
     for filename in filelist:
         if filename in rm_files:
-            print(f"[+] Deleting {filename}")
+            print(f"[+] Deleting {filename}...", flush=True)
+            sys.stdout.flush()
             os.remove(os.path.join(root_dir, filename))
 
 def handle_dir(root_dir):
