@@ -1,17 +1,29 @@
 from turtle import Turtle
-import random
 
 class Ball(Turtle):
-    def __init__(self, position):
+    def __init__(self):
         """Creates a ball."""
         super().__init__()
         self.shape("circle")
         self.color("white")
-        # self.shapesize(stretch_wid=5, stretch_len=1)
         self.penup()
-        self.goto(position)
-    
-    def random_position(self):
-        random_x = random.randint(-400, 400)
-        random_y = random.randint(-280, 280)
-        self.goto(random_x, random_y)
+        self.speed(10)
+        self.x_move = 10
+        self.y_move = 10
+
+    def move_right(self):
+        """Moves the ball right side."""
+        new_x = self.xcor() + self.x_move
+        new_y = self.ycor() + self.y_move
+        self.goto(new_x, new_y)
+
+    def bounce_y(self):
+        self.y_move *= -1
+    def bounce_x(self):
+        self.x_move *= -1
+    def reset_position(self):
+        self.goto(0,0)
+        self.bounce_x()
+
+
+
