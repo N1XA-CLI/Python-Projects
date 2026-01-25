@@ -13,8 +13,8 @@ class Paddel(Turtle):
         
     def go_up(self):
         """Vertically moves the paddel up by 20px."""
-        self.goto(self.xcor(), (self.ycor() + 20))
+        self.goto(self.xcor(), self.ycor() + 20)
         
     def go_down(self):
         """Vertically moves the paddel down by 20px."""
-        self.goto(self.xcor(), (self.ycor() - 20))
+        self.goto(self.xcor(), self.ycor() - 20)

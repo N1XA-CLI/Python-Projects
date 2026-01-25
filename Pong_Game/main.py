@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
+
 from turtle import Screen
 from paddel import Paddel
+from ball import Ball
 
 screen = Screen()
 screen.bgcolor("black")
@@ -7,8 +10,9 @@ screen.setup(width=800, height=600)
 screen.title("Pong Game")
 screen.tracer(0)
 
-l_paddel = Paddel(position=(350, 0))
-r_paddel = Paddel(position=(-350, 0))
+l_paddel = Paddel(position=(-350, 0))
+r_paddel = Paddel(position=(350, 0))
+ball = Ball(position=(0, 0))
 
 screen.listen()
 screen.onkey(r_paddel.go_up, "Up")
