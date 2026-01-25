@@ -25,6 +25,7 @@ game_is_on = True
 
 while game_is_on:
     screen.update()
+    ball.random_position()
 
 
 screen.exitonclick()
