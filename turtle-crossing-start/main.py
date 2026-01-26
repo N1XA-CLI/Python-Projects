@@ -8,7 +8,23 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 
+player = Player()
+score = Scoreboard()
+car = CarManager()
+
+screen.listen()
+screen.onkey(player.move, "Up")
+
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+    car.move()
+    if player.got_collidied(object=car):
+        score.game_end()
+        game_is_on = False
+    elif player.is_level_complete():
+        car.level_up()
+        score.level_up()
+
+screen.exitonclick()
