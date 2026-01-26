@@ -20,12 +20,7 @@ class CarManager(Turtle):
     def move(self):
         self.forward(STARTING_MOVE_DISTANCE)
     
-    def new_car(self):
-        # self.__init__()
-        pass
-    
     def level_up(self):
         global STARTING_MOVE_DISTANCE
         STARTING_MOVE_DISTANCE += MOVE_INCREMENT
         self.goto((self.xcor() + STARTING_MOVE_DISTANCE, self.ycor()))
-        self.new_car()
