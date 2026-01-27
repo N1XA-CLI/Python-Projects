@@ -16,9 +16,11 @@ class Player(Turtle):
     def move(self):
         self.forward(MOVE_DISTANCE)
 
-    def got_collidied(self, object):
-        if self.distance(object) <= 15:
+    def got_collidied(self, obj):
+        if self.distance(obj) <= 15:
             return True
+        else:
+            return False
     
     def next_level(self):
         self.goto(STARTING_POSITION)
@@ -28,4 +30,6 @@ class Player(Turtle):
         if current_ycor >= FINISH_LINE_Y:
             self.next_level()
             return True
+        else:
+            return False
     
