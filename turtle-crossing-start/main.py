@@ -24,7 +24,7 @@ while game_is_on:
         score.game_end()
         game_is_on = False
     elif player.is_level_complete():
-        car.level_up()
         score.level_up()
-
+        car.level_up()
+        
 screen.exitonclick()

@@ -1,5 +1,5 @@
 from turtle import Turtle
-
+import time
 FONT = ("Courier", 20, "normal")
 
 class Scoreboard(Turtle):
