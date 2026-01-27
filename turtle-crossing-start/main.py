@@ -19,7 +19,8 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
-    car.move()
+    car.create_car()
+    car.move_cars()
     if player.got_collidied(object=car):
         score.game_end()
         game_is_on = False
