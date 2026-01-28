@@ -30,7 +30,7 @@ def main():
 if __name__ == "__main__":
     if not len(sys.argv) >= 2:
         print("[!] Argument not found!")
-        print(f"[+] Usage: {__file__} <dir>")
+        print(f"[+] Usage: {sys.argv[0]} <dir>")
         sys.exit(404)
     print("[!] Started to look...")
     main()
