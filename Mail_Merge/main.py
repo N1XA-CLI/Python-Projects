@@ -3,8 +3,6 @@
 #Replace the [name] placeholder with the actual name.
 #Save the letters in the folder "ReadyToSend".
 
-import os
-
 with open("./Input/Letters/starting_letter.txt") as letter:
     with open("./Input/Names/invited_names.txt") as names:
         for name in names.readlines():
