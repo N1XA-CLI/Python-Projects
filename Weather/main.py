@@ -10,5 +10,7 @@ import pandas
 #     print(tempratures)
 
 report = pandas.read_csv("weather_data.csv")
-print(report["temp"])
-    
+# print(type(report["temp"]))
+# pandas.DataFrame.to_excel(report, excel_writer="weather_report.xlsx")
+temp_list = report["temp"].to_list()
+print(temp_list)
