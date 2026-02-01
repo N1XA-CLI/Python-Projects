@@ -15,6 +15,7 @@ guessed_states = []
 state_writer = WriteState()
 
 def save_progress():
+    # TODO: Save the Game progresss by saving the guessed_states with x and y co-ordiantes into a csv then read and plot the state if data exist else continue. DO ask the user if he want to resume the game or to start new game(2 confirmation before new game).
     pass
 
 
