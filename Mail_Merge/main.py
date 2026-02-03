@@ -1,4 +1,4 @@
-#TODO: Create a letter using starting_letter.txt 
+# TODO: Create a letter using starting_letter.txt
 #for each name in invited_names.txt
 #Replace the [name] placeholder with the actual name.
 #Save the letters in the folder "ReadyToSend".
@@ -16,4 +16,3 @@ Hope you can make it!
 Angela"""
             with open(f"./Output/ReadyToSend/letter_for_{name}.txt", "w") as letter:
                 letter.write(ready_letter)
-
